@@ -1,0 +1,35 @@
+<div>
+    <a href="{{ path("fos_user_group_new") }}" class="btn"><i class="icon-file"></i>Neue Gruppe</a>
+</div>
+<div class="fos_user_group_list">
+
+    <table class="table table-hover">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>ID</th>
+        </tr>
+        {% for group in groups %}
+            <div>
+                <tr >
+                    <td width="14%">
+                        <div class="pagination pagination-mini " style=" display: inline; vertical-align: middle">
+                            <ul>
+
+                                <li><a href="{{ path('fos_user_group_show', {'groupname': group.getName()} ) }}"
+                                       alt="show"> <i class="icon-eye-open"></i></a></li>
+                                <li><a href="{{ path('fos_user_group_edit', {'groupname': group.getName()} ) }}"
+                                       alt="show"> <i class="icon-edit"></i></a></li>
+                                <li><a href="{{ path('fos_user_group_delete', {'groupname': group.getName()} ) }}"
+                                       alt="show"> <i class="icon-trash"></i></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>{{ group.getName() }}</td>
+                    <td with="10%">{{ group.getId() }}</td>
+                </tr>
+
+            </div>
+        {% endfor %}
+    </table>
+</div>

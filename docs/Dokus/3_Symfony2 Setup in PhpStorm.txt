@@ -1,0 +1,19 @@
+Download PhpStorm:
+http://www.jetbrains.com/phpstorm/download/index.html
+
+-----------------
+licenses
+
+Name: EMBRACE
+
+Key:
+===== LICENSE BEGIN =====
+37623-12042010
+0000236raK98H8"FEPw2!GZ1ieL3Fw
+BNSVyvXZA!NNUh5dg4Nqa4T5wvnCFt
+Lk0F"BYtfierYAXtWs0CO15hVHCRM0
+===== LICENSE END =====
+
+-----------------
+Setting Up a Symfony2 Project in PhpStorm
+http://www.kevwebdev.com/blog/setting-up-a-symfony2-project-in-phpstorm.html

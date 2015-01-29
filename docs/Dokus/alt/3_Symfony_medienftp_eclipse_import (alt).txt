@@ -1,0 +1,13 @@
+"Project -> Build Automatically" ausschalten
+
+"File -> New -> Other -> Symfony Project"
+
+"Create project at existing location (from existing source) -> Symfony Ordner in htdocs auswählen
+
+Project Name vergeben ->  Finish
+
+In Project Properties gehen -> Builders -> Lucene Builder deaktivieren und nach unter verschieben
+
+möglicherweiße muss eclipse.exe hart beendet werden
+
+Neustart

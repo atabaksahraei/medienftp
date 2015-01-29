@@ -1,0 +1,20 @@
+Extracting the Symfony Files in your htdocs Folder
+like (C:\xampp\htdocs\Symfony\...)
+
+to Create a Database Shema
+php app/console doctrine:database:create
+
+to Update a Database Shemaphp app/console doctrine:schema:update Ðforce
+
+to Delete the old Database Shemaphp app/console doctrine:database:drop Ðforce
+
+Open the following page: http://localhost/Symfony/web/app_dev.php
+
+--------------
+In the following file, you can configure the System Specified data, like database, mail Server, locale, secret, folder path, ...
+
+Configure File: app/config/parameters.yml
+
+--------------
+for installing plugins you must download the php composer
+get composer.pharcurl -s https://getcomposer.org/installer | php--------------

@@ -1,0 +1,6 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+        {% block title %}{{ parent() }}{{ 'Profil bearbeiten'|trans({}, 'FOSUserBundle') }}{% endblock %}
+{% block fos_user_content %}
+    {{ parent() }}
+    {% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+{% endblock fos_user_content %}

@@ -1,0 +1,399 @@
+/* -- general -- */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E1E1E1;
+    background-image: url(../images/body_2_10.png);
+    background-attachment: fixed;
+    font-family: "Roboto", "Tahoma", "Lucida Sans Unicode", "Lucida Grande", "Verdana", "Geneva", sans-serif;
+    font-size: 11pt;
+}
+
+h2 {
+    background-image: url(../images/h2_arrow.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #FF7F2A;
+    font-size: 20pt;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+h3 {
+    color: #787878;
+}
+
+p {
+    line-height: 150%;
+}
+
+th {
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 5px 10px 5px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    padding: 5px 15px 5px 5px;
+}
+
+td img {
+    margin-right: 10px;
+}
+
+.zip_button_crumb {
+    margin-left: 10px;
+}
+
+table + input {
+    margin: 20px 5px 20px 15px;
+}
+
+a img {
+    border: none;
+}
+
+/* menu */
+
+#menu {
+    height: 100%;
+    width: 175px;
+    background: #1E1E1E;
+    background-image: url(../images/menu_3_10.png);
+    font-size: 13pt;
+    position: fixed;
+}
+
+#menu ul {
+    list-style: none;
+    margin-top: 50px;
+    padding: 0;
+}
+
+#menu ul li {
+    background-color: #FF7F2A;
+    background-image: url(../images/menu_shadow.png);
+    background-position: right;
+    background-repeat: repeat-y;
+    border-radius: 3px 0 0 3px;
+    margin: 6px 0 6px 30%;
+    text-align: right;
+}
+
+#menu ul li:hover {
+    background: #FFD400;
+}
+
+#menu a {
+    padding: 6px 30px 6px 20px;
+    display: block;
+    color: #FFF;
+    font-size: 105%;
+    text-decoration: none;
+}
+
+#menu .active {
+    background: #E1E1E1;
+    background-image: url(../images/menu_shadow.png);
+    background-position: right;
+    background-repeat: repeat-y;
+    color: #1E1E1E;
+}
+
+/* content */
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    min-width: 865px;
+    display: inline-block;
+    background: url(../images/wrapper_shadow.png);
+    background-position: right;
+    background-repeat: repeat-y;
+    margin-left: 175px;
+    padding-right: 5px;
+}
+
+#content {
+    height: 100%;
+    background: #FFF;
+    padding: 40px 80px 60px 80px;
+}
+
+.text_link {
+    line-height: 150%;
+}
+
+.text_link:link, .text_link:visited {
+    color: #FF7F2A;
+    text-decoration: none;
+}
+
+.text_link:hover {
+    color: #FF7F2A;
+    text-decoration: underline;
+}
+
+#content table a:link, #content table a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+
+#content table a:hover {
+    color: #FF7F2A;
+    text-decoration: underline;
+}
+
+#content .rank a:link {
+    text-decoration: none;
+}
+
+/* classes */
+
+.empty {
+    font-style: italic;
+    color: #b4b4b4;
+}
+
+.inline {
+    display: inline;
+}
+
+.no_margin {
+    margin: 0 !important;
+}
+
+.list {
+    border-spacing: 0;
+    padding: 15px 20px 15px 20px;
+}
+
+.list tr:nth-child(odd) {
+    background: #E1E1E1;
+}
+
+.list th {
+    background: #FFF;
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* -- files -- */
+
+#history {
+    display: inline;
+    list-style-type: none;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+#history li {
+    display: inline;
+    padding: 0 29px 0 13px;
+    background: url("../images/arrow_right.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#history a:link, #history li a:visited {
+    color: #242424;
+}
+
+#history li:last-child {
+    background: none;
+    font-weight: bold;
+}
+
+#history li:last-child a:link, #history li:last-child a:visited {
+    color: #FF7F2A;
+}
+
+#files {
+    margin-top: 10px;
+}
+
+#files .list {
+    width: 100%;
+}
+
+#files .list th {
+    font-size: 11pt;
+    padding-bottom: 15px;
+}
+
+#files .list td {
+    padding: 5px;
+}
+
+#files td.icons {
+    width: 57px;
+    padding: 0;
+    padding-left: 15px;
+}
+
+#files td.icons .description{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#files td.link {
+    padding: 0;
+}
+
+#files td.link a {
+    display: block;
+    padding: 9px;
+}
+
+#files td.clicks {
+    width: 45px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+#files td.size {
+    width: 75px;
+    text-align: right;
+}
+
+#files td.lastAction {
+    width: 140px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+/* -- stats -- */
+
+.rank {
+    width: 330px;
+    font-size: 10pt;
+    float: left;
+    padding: 10px;
+}
+
+.rank table {
+    width: 100%;
+}
+
+.rank th {
+    padding: 0 0 10px 0;
+}
+
+.rank th:last-child {
+    width: 20%;
+}
+
+.rank td {
+    padding: 2px;
+}
+
+#entries {
+    clear: both;
+    padding-top: 60px;
+}
+
+#entries strong {
+    color: #FF7F2A;
+}
+
+#entries  table {
+    width: 100%;
+    font-size: 11pt;
+    border-spacing: 0;
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+#entries th {
+    background: #FFF;
+}
+
+#entries  tr:nth-child(odd) {
+    background: #E1E1E1;
+}
+
+#entries td {
+    font-size: 10pt;
+}
+
+.sort {
+    padding: 2px 0 0 10px;
+}
+
+/* -- users -- */
+
+#users {
+    margin-top: 40px;
+}
+
+#users .list th {
+    font-size: 10pt;
+}
+
+#users .list  td {
+    font-size: 10pt;
+    padding: 5px;
+}
+
+.filter {
+    display: inline;
+    line-height: 200%;
+    padding-right: 20px;
+}
+
+/* -- register -- */
+
+#captcha {
+    margin-top: 30px;
+}
+
+#captcha  + input {
+    margin: 20px 5px 20px 15px;
+}
+
+#accept {
+    margin-top: 20px;
+    font-size: 9pt;
+}
+
+#accept input {
+    margin: 0 10px 5px 15px;
+    float: left;
+}
+
+/* -- index -- */
+
+.hinweis {
+    background: #FFD47F;
+    border: 2px solid #FF7F2A;
+    margin: 30px 0;
+    padding: 15px;
+}
+
+/* -- Form --*/
+form {
+    margin: 0;
+}
+
+.form-wrapper .btn {
+    margin: 20px 5px 20px 15px;
+}

@@ -1,0 +1,10 @@
+Hans:
+- Statistiken
+- Upload
+
+Atabak:
+- User Management
+- Acme Demo Zeug aus app/config/config.yml löschen
+
+sonstiges:
+- Menü

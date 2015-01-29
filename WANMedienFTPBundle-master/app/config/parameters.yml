@@ -1,0 +1,27 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     medienftp
+    database_user:     root
+    database_password: root
+
+    mailer_transport:  smtp
+    mailer_host:       smtp.1und1.de
+    mailer_user:       mow@sahraei.de
+    mailer_password:   mowsymfony
+    mailer_encryption: ssl
+    mailer_auth_mode:  login
+
+    locale:            de
+    secret:            EwCTDVR126nA2501R4x017PMpVTtc6uf9Qq9nANih4hCzLLqVNVCA64Ws5Cii21J
+
+#Hans
+#    absolute_files_path:         C:\xampp\htdocs\files
+#    absolute_temp_zip_path:      C:\xampp\htdocs\temp_zip
+
+#Atabak
+    absolute_files_path:         /Applications/MAMP/htdocs/Symfony/files
+    absolute_temp_zip_path:      /Applications/MAMP/htdocs/Symfony/temp_zip
+
+    wan_user.model.user.class:   WAN\MedienFTPBundle\Entity\User

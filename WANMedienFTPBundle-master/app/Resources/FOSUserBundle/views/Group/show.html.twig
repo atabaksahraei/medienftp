@@ -1,0 +1,7 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block title %}{{ parent() }}{{ group.getName() }}{% endblock %}
+{% block fos_user_content %}
+    {{ parent() }}
+    {% include "FOSUserBundle:Group:show_content.html.twig" %}
+{% endblock fos_user_content %}
+

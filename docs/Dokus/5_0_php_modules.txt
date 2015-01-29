@@ -1,0 +1,6 @@
+instructions
+https://packagist.org
+
+----------------
+for installing plugins you must download the php composer
+get composer.pharcurl -s https://getcomposer.org/installer | php

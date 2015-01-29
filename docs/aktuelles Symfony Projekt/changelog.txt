@@ -1,0 +1,9 @@
+17.03.2013 (Hans):
+- Daten Zip-Funktion eingebaut
+- Es werden nun absolute Pfade verwendet, um den Temp Zip- und files-Ordner anzugeben (siehe app/config/parameters.yml)
+- Acme Demo Projekt gelöscht
+- CSS Reste aufgeräumt
+- Row Hover eingebaut
+- ganze Dateinamen Spalte ist nun anklickbar (für Download oder in Ordner wechseln)
+- Zip-Funktion für aktuellen Ordner ist nun in oben Breadcrumbs
+- Haupttabelle passt sich nun an Inhalt an (nicht mehr feste Breite, jetzt min. Breite)

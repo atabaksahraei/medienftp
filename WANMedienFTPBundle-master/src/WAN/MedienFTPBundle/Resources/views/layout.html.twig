@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}mftp | {% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/wanmedienftp/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('bundles/wanmedienftp/css/style.css') }}" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/wanmedienftp/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="menu">
+        {{ knp_menu_render('WANMedienFTPBundle:Builder:mainMenu') }}
+    </div>
+
+    <div id="wrapper">
+        <div id="content">
+            <h2>{{ block("title") }}</h2>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}

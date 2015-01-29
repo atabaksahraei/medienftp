@@ -1,0 +1,5 @@
+<form class="form-horizontal"
+      action="{{ path('fos_user_group_edit', {'groupname': groupname} ) }}" {{ form_enctype(form) }} method="POST">
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-warning"><i class="icon-ok icon-white"></i> &Uuml;bernehmen</button>
+</form>

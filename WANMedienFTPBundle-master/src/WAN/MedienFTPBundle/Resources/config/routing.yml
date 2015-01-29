@@ -1,0 +1,31 @@
+wan_medien_ftp_login:
+    pattern:  /login
+    defaults: { _controller: FOSUserBundle:Security:login }
+
+wan_medien_ftp_sync:
+    pattern:  /admin/sync
+    defaults: { _controller: WANMedienFTPBundle:Media:sync }
+    
+wan_medien_ftp_folder_list:
+    pattern:  /{id}
+    defaults: { _controller: WANMedienFTPBundle:Media:dirList, id: 0 }
+    requirements: 
+      id: \d+
+
+wan_medien_ftp_folder_zip:
+    pattern:  /dirzip/{id}
+    defaults: { _controller: WANMedienFTPBundle:Media:dirZip }
+    requirements: 
+      id: \d+
+
+wan_medien_ftp_file_zip:
+    pattern:  /filezip/{id}
+    defaults: { _controller: WANMedienFTPBundle:Media:fileZip }
+    requirements: 
+      id: \d+
+
+wan_medien_ftp_file_download:
+    pattern:  /download/{id}
+    defaults: { _controller: WANMedienFTPBundle:Media:fileDownload }
+    requirements: 
+      id: \d+

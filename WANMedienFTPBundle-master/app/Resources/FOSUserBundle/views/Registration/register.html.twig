@@ -1,0 +1,8 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    {% block title %}{{ parent() }}{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}{% endblock %}
+    {% block fos_user_content %}
+        {{ parent() }}
+        {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+    {% endblock fos_user_content %}
+{% endif %}

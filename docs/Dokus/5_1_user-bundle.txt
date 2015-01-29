@@ -1,0 +1,23 @@
+composer path
+https://packagist.org/packages/friendsofsymfony/user-bundle
+require: "friendsofsymfony/user-bundle": "*"
+
+Requires
+php: >=5.3.2
+symfony/framework-bundle: >=2.1,<2.4-dev
+symfony/form: >=2.1,<2.4-dev
+symfony/security-bundle: >=2.1,<2.4-dev
+	 
+Requires (Dev)
+twig/twig: *
+doctrine/doctrine-bundle: *
+swiftmailer/swiftmailer: *
+willdurand/propel-typehintable-behavior: dev-master
+symfony/validator: 2.1.*
+symfony/yaml: 2.1.*
+
+instructions
+https://github.com/FriendsOfSymfony/FOSUserBundle/blob/master/Resources/doc/index.md
+
+----------------
+Fehler:InvalidConfigurationException: Unrecognized options "fos_user" under "doctrine.dbal.connections.default"Lšsung:# app/config/config.ymlfos_user:    db_driver: orm    firewall_name: mainFirewall Eintrag machen# app/config/security.ymlmain:    pattern: ^/    form_login:    provider: fos_userbundle    csrf_provider: form.csrf_provider    logout:       true    anonymous:    true

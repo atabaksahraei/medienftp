@@ -1,0 +1,23 @@
+{% extends "WANMedienFTPBundle::layout.html.twig" %}
+
+{% block content %}
+    {% for key, message in app.session.getFlashes() %}
+        <div class="{{ key }}">
+            {{ message|trans({}, 'FOSUserBundle') }}
+        </div>
+    {% endfor %}
+
+    <div class="form-wrapper">
+        {% block fos_user_content %}
+            {% if error is defined %}
+                {% if error %}
+                    <div class="alert alert-error">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{ error|trans({}, 'FOSUserBundle') }}
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endblock fos_user_content %}
+    </div>
+
+{% endblock content %}

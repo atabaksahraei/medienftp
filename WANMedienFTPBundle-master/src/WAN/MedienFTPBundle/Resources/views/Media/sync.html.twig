@@ -1,0 +1,39 @@
+{% extends 'WANMedienFTPBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }}sync{% endblock %}
+
+{% block content %}
+    {% for folder in updatedFolders %}
+        <img src="{{ asset('bundles/wanmedienftp/images/folder.png') }}"
+             alt="folder icon"/> Metadaten von {{ folder.name }} aktualisiert<br/>
+    {% endfor %}
+
+    {% for file in updatedFiles %}
+        <img src="{{ asset('bundles/wanmedienftp/images/file.png') }}"
+             alt="file icon"/> Metadaten von {{ file.name }} aktualisiert<br/>
+    {% endfor %}
+
+    {% for folder in newFolders %}
+        <img src="{{ asset('bundles/wanmedienftp/images/folder.png') }}"
+             alt="folder icon"/> {{ folder.name }} hinzugefügt<br/>
+    {% endfor %}
+
+    {% for file in newFiles %}
+        <img src="{{ asset('bundles/wanmedienftp/images/file.png') }}" alt="file icon"/> {{ file.name }} hinzugefügt
+        <br/>
+    {% endfor %}
+
+    {% for folder in deletedFolders %}
+        <img src="{{ asset('bundles/wanmedienftp/images/folder.png') }}" alt="folder icon"/> {{ folder.name }} gelöscht
+        <br/>
+    {% endfor %}
+
+    {% for file in deletedFiles %}
+        <img src="{{ asset('bundles/wanmedienftp/images/file.png') }}" alt="file icon"/> {{ file.name }} gelöscht<br/>
+    {% endfor %}
+
+
+    {% if updatedFolders is empty and updatedFiles is empty and newFolders is empty and newFiles is empty and deletedFolders is empty and deletedFiles is empty %}
+        <p class="empty">nichts synchronisiert</p>
+    {% endif %}
+{% endblock %}

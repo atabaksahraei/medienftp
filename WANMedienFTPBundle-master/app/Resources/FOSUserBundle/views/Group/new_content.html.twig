@@ -1,0 +1,5 @@
+<form class="form-horizontal" action="{{ path('fos_user_group_new') }}" {{ form_enctype(form) }} method="POST">
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-warning"><i
+                class="icon-plus icon-white"></i> {{ 'group.new.submit'|trans({}, 'FOSUserBundle') }}</button>
+</form>

@@ -1,0 +1,3 @@
+YAML = „YAML Ain't Markup Language“ (ursprünglich „Yet Another Markup Language“) angelehnt an XML.	(http://de.wikipedia.org/wiki/YAML)
+ORM = Object-Relational-Mapping (http://de.wikipedia.org/wiki/Object-Relational-Mapping)
+

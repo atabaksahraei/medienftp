@@ -1,0 +1,103 @@
+{% extends 'WANMedienFTPBundle::layout.html.twig' %}
+
+{% block title %}{{ parent() }}files{% if parentFolder is defined %} > {{ parentFolder.name|basename|shortenTo(30) }}{% endif %}{% endblock %}
+
+{% block content %}
+
+    {% if parentFolder is defined %}
+        <ul id="history">
+            {% spaceless %}
+                {# Link zum Hauptverzeichnis immer anzeigen #}
+                <li>
+                    <a href="{{ path("wan_medien_ftp_folder_list") }}">files</a>
+                </li>
+
+                {% for crumb in breadcrumbs %}
+                    {% if loop.last %}
+                        <li>
+                            <a href="{{ path("wan_medien_ftp_folder_list", {"id": crumb.id}) }}" title="{{ crumb.name|basename }}">
+                                {{ crumb.name|basename|shortenTo(30) }}
+                            </a>
+
+                            <a href="{{ path("wan_medien_ftp_folder_zip", {"id": crumb.id}) }}" title="zip {{ crumb.name|basename }}" class="btn btn-mini zip_button_crumb">
+                                <i class="icon-briefcase"></i>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ path("wan_medien_ftp_folder_list", {"id": crumb.id}) }}"
+                               title="{{ crumb.name|basename }}">{{ crumb.name|basename|shortenTo(30) }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            {% endspaceless %}
+        </ul>
+    {% else %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path("wan_medien_ftp_sync") }}" class="btn"><i class="icon-refresh"></i>&nbsp;Sync</a>
+        {% endif %}
+    {% endif %}
+
+    <div id="files">
+        <table id="list" class="table table-hover">
+            <thead>
+            <tr>
+                <th colspan="2">Datei</th>
+
+                <th>Größe</th>
+                <th>letzte&nbsp;Aktion&nbsp;am</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if (folders is empty and files is empty) %}
+                <tr class="empty">
+                    <td colspan="4">
+                        leer
+                    </td>
+                </tr>
+            {% endif %}
+
+            {% for folder in folders %}
+                <tr>
+                    {% spaceless %}
+                        <td class="icons">
+                            <a href="{{ path("wan_medien_ftp_folder_zip", {"id": folder.id}) }}" title="zip {{ folder.name|basename }}" class="btn btn-mini">
+                                <i class="icon-briefcase"></i>
+                            </a>
+                            <i class="icon-folder-open description"></i>
+                        </td>
+
+                        <td class="link">
+                            <a href="{{ path("wan_medien_ftp_folder_list", {"id": folder.id}) }}" title="{{ folder.name|basename }}">
+                                {{ folder.name|basename|shortenTo(45) }}
+                            </a>
+                        </td>
+                        <td class="size">{{ folder.size|bytesToHuman }}</td>
+                        <td class="lastAction">{{ folder.mostCurrentDate|date("d.m.Y H:i:s") }}</td>
+                    {% endspaceless %}
+                </tr>
+            {% endfor %}
+
+            {% for file in files %}
+                <tr>
+                    {% spaceless %}
+                        <td class="icons">
+                            <a href="{{ path("wan_medien_ftp_file_zip", {"id": file.id}) }}" title="zip {{ file.name|basename }}" class="btn btn-mini">
+                                <i class="icon-briefcase"></i>
+                            </a>
+                            <i class="icon-file description"></i>
+                        </td>
+                        <td class="link">
+                            <a href="{{ path("wan_medien_ftp_file_download", {"id": file.id}) }}" title="{{ file.name|basename }}">
+                                {{ file.name|basename|shortenFilenameTo(45) }}
+                            </a>
+                        </td>
+                        <td class="size">{{ file.size|bytesToHuman }}</td>
+                        <td class="lastAction">{{ file.mostCurrentDate|date("d.m.Y H:i:s") }}</td>
+                    {% endspaceless %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

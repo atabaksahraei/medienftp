@@ -1,0 +1,18 @@
+composer path
+https://packagist.org/packages/sonata-project/doctrine-orm-admin-bundle
+require: "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev"
+
+Requires
+symfony/symfony: >=2.2,<2.3
+doctrine/orm: >=2.3,<3.0
+knplabs/knp-menu-bundle: >=1.1,<2.0
+sonata-project/admin-bundle: >=2.2.2
+
+Requires (Dev)
+None
+
+instructions
+http://sonata-project.org/bundles/admin/2-1/doc/index.html
+
+----------------
+Fehler:

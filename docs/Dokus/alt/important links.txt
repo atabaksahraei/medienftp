@@ -1,0 +1,2 @@
+Symfony install: http://www.symfony-project.org/getting-started/1_4/en/
+Sample-Project: http://www.symfony-project.org/jobeet/1_4/Doctrine/en/

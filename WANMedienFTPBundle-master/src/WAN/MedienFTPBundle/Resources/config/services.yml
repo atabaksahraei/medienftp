@@ -1,0 +1,19 @@
+parameters:
+#    wan_medien_ftp.example.class: WAN\MedienFTPBundle\Example
+
+services:
+    wan.twig.bytesto_extension:
+        class: WAN\MedienFTPBundle\Twig\BytesToTwigExtension
+        tags:
+            - { name: twig.extension }
+            
+    wan.twig.shorten_extension:
+        class: WAN\MedienFTPBundle\Twig\ShortenTwigExtension
+        tags:
+            - { name: twig.extension }
+
+    wan_user.registration.form.type:
+        class: WAN\MedienFTPBundle\Form\Type\RegistrationFormType
+        arguments: [%wan_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: wan_user_registration }

@@ -1,0 +1,17 @@
+Symfony Konfiguration unter Windows xampp 1.8.1
+
+Zip in htdocs entpacken (in htdocs sollte Ordner Symfony erscheinen)
+
+localhost/Symfony/web/config.php aufrufen -> 2 Fehler
+
+1. Fehler: php_intl.dll aktivieren (vgl. http://www.tiv.net/2010/12/php-intl-extension-windows-apache.html)
+	Alle Dateien sind in xampp vorhanden, sie müssen nur aktiviert werden:
+	1. in php.ini die Zeile extension=php_intl.dll einkommentieren
+	2. PATH Umgebungsvariable muss auf xampp\php zeigen
+	3. Apache neustarten
+
+2. Fehler: PHP APC installieren (vgl. http://docs.moodle.org/20/en/Installing_APC_in_Windows#Download_the_correct_version)
+	1. php_apc.dll herunterladen: http://downloads.php.net/pierre/ php_apc-3.1.10-5.4-vc9-x86.zip
+	2. php_apc.dll in ts Ordner (Thread Safe) in xampp\php\ext entpacken
+	3. In php.ini Zeile extension=php_apc.dll hinzufügen
+	4. Apache neustarten
